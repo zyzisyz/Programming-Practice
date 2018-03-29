@@ -1,0 +1,49 @@
+{
+    "window.zoomLevel": 1,
+    "files.autoGuessEncoding": true,
+
+    "editor.snippetSuggestions": "top",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.wordWrap": "on",
+
+    "C_Cpp.clang_format_sortIncludes": true,
+    "[cpp]": {
+        "editor.quickSuggestions": true
+    },
+    "[c]": {
+        "editor.quickSuggestions": true
+    },
+    "problems.decorations.enabled": true,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "files.associations": {
+        "*.cfg": "ini",
+        "*.fsh": "glsl",
+        "stack": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "utility": "cpp"
+    },
+}
