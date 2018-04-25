@@ -15,10 +15,13 @@ BUPT programing practice
 0. [常用的vscode快捷键](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/vscode_referance.md)
 1. [类和对象](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/complex)
 2. [继承和派生]()
+3. [多态](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/多态.md)
 3. [异常文件处理]()
 4. [文件的读写]()
 
 ## Part2 【win32程序设计实践】
-1. [实验一]()
-2. [实验二]()
-3. [实验三]()
+### 1. [实验一]()
+
+### 2. [实验二]()
+
+### 3. [实验三]()
