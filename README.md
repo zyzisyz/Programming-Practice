@@ -12,16 +12,40 @@ BUPT programing practice
 ---
 
 ## Part1【C++ 编程基础】
+
 0. [常用的vscode快捷键](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/vscode_referance.md)
+
 1. [类和对象](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/complex)
+
 2. [继承和派生]()
+
 3. [多态](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note/多态.md)
-3. [异常文件处理]()
-4. [文件的读写]()
+
+4. [异常文件处理]()
+
+5. [文件的读写]()
 
 ## Part2 【win32程序设计实践】
-### 1. [实验一]()
 
-### 2. [实验二]()
+### [实验一](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/graphic)
 
-### 3. [实验三]()
+1. 建立一个自己的绘图程序，支持下列菜单功能：
+    - 文件
+        - 参数设置
+        - 可设计成对话框形式
+        - 退出
+    - 绘图
+        - 简单图形
+            - 点和线
+            - 三角形
+            - 抛物线
+            - 正弦曲线
+        - 时钟
+        - 复杂图形
+            
+            比如：弹球，随机数分布, 。。。。。。
+1. 撰写实验报告：开发思路，主要技术，相关算法，主要编程点（书上的尽量少写，主要写自己的东西）
+
+### [实验二]()
+
+### [实验三]()
