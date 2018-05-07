@@ -45,7 +45,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="dota2.ico">
+    <Image Include="pig.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

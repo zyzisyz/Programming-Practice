@@ -2,10 +2,9 @@
 #include"stdafx.h"
 
 class Point
-{
-private:
-	double x, y;
+{	
 public:
+	double x, y;
 	Point(double x1 = 0.0, double y1 = 0.0)
 	{
 		x = x1;
@@ -14,9 +13,8 @@ public:
 	
 	double get_x()const { return x; }
 	double get_y()const { return y; }
-};
+	void operator=(Point)
+	{
 
-struct point
-{
-	int x, y;
+	}
 };

@@ -166,7 +166,7 @@
     <ResourceCompile Include="graphic.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="dota2.ico" />
+    <Image Include="pig.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
