@@ -27,7 +27,7 @@ BUPT programing practice
 
 ## Part2 【win32程序设计实践】
 
-### [实验一](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/graphic)
+### [实验一 Graphic](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/graphic)
 
 1. 建立一个自己的绘图程序，支持下列菜单功能：
     - 文件
