@@ -6,3 +6,4 @@ Debug
 x64
 .vscode
 .tlog
+.Release
