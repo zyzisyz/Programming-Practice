@@ -4,3 +4,5 @@
 .cpd
 Debug
 x64
+.vscode
+.tlog

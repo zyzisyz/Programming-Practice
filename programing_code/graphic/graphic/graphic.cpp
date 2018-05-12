@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "graphic.h"
 #include"stdafx.h"
-#include"point.h"
+#include"Shape.h"
 #include<cmath>
 
 
@@ -171,6 +171,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			InvalidateRect(hWnd, NULL, true);
 			break;
 
+		case PIG:
+			system("python pig.py");
+			break;
+
+		case CLOCK:
+			system("python clock.py");
+			break;
+
 		default:
 			return DefWindowProc(hWnd, message, wParam, lParam);
 		}
@@ -211,9 +219,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			DrawSin(hWnd, hdc);
 			EndPaint(hWnd, &ps);
 			break;
-		}
-		
-		
+		}		
 	}
 	break;
 
