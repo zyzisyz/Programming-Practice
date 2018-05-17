@@ -27,9 +27,6 @@
     <ClInclude Include="graphic.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="GraphicWindows.h">
       <Filter>头文件</Filter>
     </ClInclude>

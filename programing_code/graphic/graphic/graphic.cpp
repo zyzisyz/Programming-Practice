@@ -1,16 +1,11 @@
 //graphic.cpp: 定义应用程序的入口点。
 //
-
+#pragma once
 #include "stdafx.h"
 #include "graphic.h"
-#include"stdafx.h"
-#include"Shape.h"
-#include<cmath>
 
 
 #define MAX_LOADSTRING 100
-
-
 
 
 
@@ -134,15 +129,30 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	
+	PAINTSTRUCT ps;
+	HDC hdc;
+	GraphicWindow cwin;
 	switch (message)
 	{
+	case WM_CREATE:
+		//设置timer
+		SetTimer(hWnd, 1, 60, NULL);
+		break;
+	case WM_TIMER:
+		InvalidateRect(hWnd, NULL, TRUE);
+		break;
+
 	case WM_COMMAND:
 	{
 		int wmId = LOWORD(wParam);
 		// 分析菜单选择: 
 		switch (wmId)
 		{
+		case BALL:
+			init();
+			Menue = BALL;
+			InvalidateRect(hWnd, NULL, true);
+			break;
 		case IDM_ABOUT:
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 			break;
@@ -175,20 +185,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			system("python pig.py");
 			break;
 
-		case CLOCK:
-			system("python clock.py");
+		case DRAWCLOCK:
+			Menue = DRAWCLOCK;
+			InvalidateRect(hWnd, NULL, true);
 			break;
-
 		default:
 			return DefWindowProc(hWnd, message, wParam, lParam);
 		}
 	}
 	break;
 	case WM_PAINT:
-	{
-		
-		PAINTSTRUCT ps;
-		HDC hdc = BeginPaint(hWnd, &ps);
+		hdc = BeginPaint(hWnd, &ps);
 		TEXTMETRIC tm;								// 取得与文本相关的数据     
 		GetTextMetrics(ps.hdc, &tm);
 		RECT rect;
@@ -196,32 +203,41 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		rect.left = ps.rcPaint.left;
 		rect.right = ps.rcPaint.right;
 		rect.bottom = rect.top + tm.tmHeight;
-		DrawText(ps.hdc, L"Welcome to use zyz's Graphic program!", -1, &rect, DT_CENTER);
-	
-
-		switch (Menue) 
-		{
-
-		case POINT:
-			DrawPixels(hWnd, hdc);
-			EndPaint(hWnd, &ps);
-			break;
+		DrawText(ps.hdc, "Welcome to use zyz's Graphic program!", -1, &rect, DT_CENTER);
 		
-		case TRIANGLE:
-			DrawTriangle(hWnd, hdc);
-			EndPaint(hWnd, &ps);
-			break;
-		case PA:
-			DrawPA(hWnd, hdc);
-			EndPaint(hWnd, &ps);
-			break;
-		case SIN:
-			DrawSin(hWnd, hdc);
-			EndPaint(hWnd, &ps);
-			break;
-		}		
-	}
-	break;
+		if (Menue)
+		{	
+			cwin.open(hWnd, hdc);
+			switch (Menue)
+			{
+			case DRAWCLOCK:
+				mclock(cwin);
+				break;
+
+			case POINT:
+				DrawPixels(hWnd, hdc);
+				break;
+
+			case TRIANGLE:
+				DrawTriangle(hWnd, hdc);
+				break;
+
+			case PA:
+				DrawPA(hWnd, hdc);				
+				break;
+
+			case SIN:
+				DrawSin(hWnd, hdc);				
+				break;
+
+			case BALL:
+				DrawBall(cwin);
+				break;
+			}
+			
+		}
+		EndPaint(hWnd, &ps);
+		break;
 
 	case WM_DESTROY:
 		PostQuitMessage(0);
