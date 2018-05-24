@@ -136,7 +136,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_CREATE:
 		//ÉèÖÃtimer
-		SetTimer(hWnd, 1, 60, NULL);
+		SetTimer(hWnd, 1, 50, NULL);
 		break;
 	case WM_TIMER:
 		InvalidateRect(hWnd, NULL, TRUE);
@@ -211,27 +211,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			switch (Menue)
 			{
 			case DRAWCLOCK:
+				cwin.setBrush(RGB(255, 255, 255));
 				mclock(cwin);
 				break;
+				
 
 			case POINT:
+				cwin.setBrush(RGB(255, 255, 255));
 				DrawPixels(hWnd, hdc);
 				break;
 
 			case TRIANGLE:
+				cwin.setBrush(RGB(255, 255, 255));
 				DrawTriangle(hWnd, hdc);
 				break;
 
 			case PA:
+				cwin.setBrush(RGB(255, 255, 255));
 				DrawPA(hWnd, hdc);				
 				break;
 
 			case SIN:
+				cwin.setBrush(RGB(255, 255, 255));
 				DrawSin(hWnd, hdc);				
 				break;
 
 			case BALL:
+				cwin.setBrush(RGB(0 + Ccount, 120 + Ccount, -Ccount + 215));
 				DrawBall(cwin);
+				Ccount += 10;
+				if (abs(Ccount) >= 55)
+				{
+					Ccount = 0;
+				}
 				break;
 			}
 			

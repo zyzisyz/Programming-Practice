@@ -112,7 +112,8 @@ Message::Message(Point s, double x)
 };
 
 //绘图类
-class GraphicWindow {
+class GraphicWindow
+{
 public:
 	GraphicWindow()
 		:_user_xmin(-10), _user_xmax(10), _user_ymin(6), _user_ymax(-6)
@@ -124,13 +125,14 @@ public:
 		_user_ymin = ymin, _user_ymax = ymax;
 	}
 	// 清除窗口
-	void clear();
+	void clear(COLORREF mColor);
 	GraphicWindow& operator<<(Point p);  // 显示一个点
 	GraphicWindow& operator<<(Circle c);  // 显示一个圆
 	GraphicWindow& operator<<(Line s);  // 显示一条线    
 	GraphicWindow& operator<<(Message t);  // 显示一个文本串
 	void open(HWND hwnd, HDC mainwin_hdc);  // 打开一个窗口
 	HDC GetHDC() { return _hdc; }
+	void setBrush(COLORREF mColor);
 private:
 	int user_to_disp_x(double x) const;  // 逻辑到设备x坐标转换
 	int user_to_disp_y(double y) const;  // 逻辑到设备y坐标转换
@@ -151,7 +153,8 @@ private:
 	// 设备环境句柄
 	HDC _hdc;
 };
-void GraphicWindow::open(HWND hwnd, HDC mainwin_hdc) {
+void GraphicWindow::open(HWND hwnd, HDC mainwin_hdc) 
+{
 	RECT rect;
 	GetClientRect(hwnd, &rect);
 	_disp_xmax = rect.right - 1;
@@ -160,15 +163,21 @@ void GraphicWindow::open(HWND hwnd, HDC mainwin_hdc) {
 	
 	
 	//创建蓝色笔刷
-	HBRUSH hbrush = CreateSolidBrush(RGB(0, 120, 215)); 
-	SelectObject(_hdc, hbrush);  // 指定画刷
+	HBRUSH BlueBrush = CreateSolidBrush(RGB(0, 120, 215)); 
+	SelectObject(_hdc, BlueBrush);  // 指定画刷
 	SelectObject(_hdc, GetStockObject(BLACK_PEN));
 	SelectObject(_hdc, GetStockObject(SYSTEM_FONT));
-	clear();
+	clear(RGB(255, 255, 255));
 }
 
-void GraphicWindow::clear() {
-	COLORREF color = RGB(0, 120, 215);
+inline void GraphicWindow::setBrush(COLORREF mColor)
+{
+	clear(mColor);
+}
+
+void GraphicWindow::clear(COLORREF mColor)
+{
+	COLORREF color = mColor;
 	HBRUSH brush = CreateSolidBrush(color);
 	HBRUSH saved_brush = (HBRUSH)SelectObject(_hdc, brush);
 	PatBlt(_hdc, 0, 0, _disp_xmax, _disp_ymax, PATCOPY);
@@ -293,6 +302,7 @@ void mclock(GraphicWindow cwin)
 	hLine.SetColor((RGB(50, 50, 50)));		//时针	   
 	mLine.SetColor((RGB(55, 20, 220)));	//分针
 	sLine.SetColor((RGB(215, 90, 90)));		//秒针
+
 	cwin << hLine << mLine << sLine << org;
 }
 
@@ -310,14 +320,16 @@ bool GoUp[5];
 
 void init()
 {
+	Ccount = 0;
 	srand((unsigned)time(NULL));
 	for (int i = 0; i < n; ++i)
 	{
+		
 		r[i] = rand() % 256;
 		g[i] = rand() % 256;
 		b[i] = rand() % 256;
-		x[i] = (rand() / 100) % 10;
-		y[i] = (rand() / 100) % 6;
+		x[i] = (rand() / 100) % 20 - 10;
+		y[i] = (rand() / 100) % 12 - 6;
 		p[i].setPoint(x[i], y[i]);
 		c[i].setCircle(p[i], 0.7);
 		w[i] = PI / 2 * (rand() % 200) / 200;
@@ -362,37 +374,67 @@ void init()
 
 void DrawBall(GraphicWindow cwin)
 {
+	
 	//位置变化
 	for (int i = 0; i < n; ++i)
 	{
 		//判断有没有有到边界
-		if (x[i] + 0.5 >= 10) { GoLeft[i] = false; }
-		if (x[i] - 0.5 <= -10) { GoLeft[i] = true; }
-		if (y[i] + 0.5 >= 6) { GoUp[i] = false; }
-		if (y[i] - 0.5 <= -6) { GoUp[i] = true; }
+		if (x[i] + 0.5 >= 10)
+		{
+			GoLeft[i] = false;
+			r[i] = rand() % 256;
+			g[i] = rand() % 256;
+			b[i] = rand() % 256;
+			
+		}
+		if (x[i] - 0.5 <= -10)
+		{
+			GoLeft[i] = true;
+			r[i] = rand() % 256;
+			g[i] = rand() % 256;
+			b[i] = rand() % 256;
+			
+		}
+		if (y[i] + 0.5 >= 6)
+		{
+			GoUp[i] = false;
+			r[i] = rand() % 256;
+			g[i] = rand() % 256;
+			b[i] = rand() % 256;
+			
+		}
+		if (y[i] - 0.5 <= -6)
+		{
+			GoUp[i] = true;
+			r[i] = rand() % 256;
+			g[i] = rand() % 256;
+			b[i] = rand() % 256;
+			
+		}
 		if (GoLeft[i])
 		{
-			x[i] += 0.3*cos(w[i]);
+			x[i] += (0.5 + 2 * double(i) / 10)*cos(w[i]);
 		}
 		else
 		{
-			x[i] -= 0.3*cos(w[i]);
+			x[i] -= (0.5 + 2 * double(i) / 10)*cos(w[i]);
 		}
 
 		if (GoUp[i])
 		{
-			y[i] += 0.3*sin(w[i]);
+			y[i] += (0.5 + 2 * double(i) / 10)*sin(w[i]);
 		}
 		else
 		{
-			y[i] -= 0.3*sin(w[i]);
+			y[i] -= (0.5 + 2 * double(i) / 10)*sin(w[i]);
 		}
 		
 	}
 
 	//颜色变化
+	/*
 	Ccount++;
-	srand((unsigned)time(NULL));
+	
 	if (Ccount == 20)
 	{
 		Ccount = 0;
@@ -405,6 +447,7 @@ void DrawBall(GraphicWindow cwin)
 		HBRUSH hbrush = CreateSolidBrush(RGB(r, g, b));
 		SelectObject(cwin.GetHDC(), hbrush);  // 指定画刷
 	}
+	*/
 	
 	//画画
 	for (int i = 0; i < n; ++i)
@@ -414,5 +457,6 @@ void DrawBall(GraphicWindow cwin)
 		p[i].setPoint(x[i], y[i]);
 		c[i].setCircle(p[i], 0.7);
 		cwin << c[i];
+		DeleteObject(hbrush);
 	}
 }
