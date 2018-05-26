@@ -216,6 +216,7 @@
     <None Include="res\StudentInfo.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\bupt.ico" />
     <Image Include="res\StudentInfo.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
