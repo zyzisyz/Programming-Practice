@@ -56,6 +56,6 @@ BUPT programing practice
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/1.png)
 
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/2.png)
-### [实验二]()
+### [实验二 学生信息管理系统]()
 
 
