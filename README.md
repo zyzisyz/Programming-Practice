@@ -45,7 +45,7 @@ BUPT programing practice
             - 正弦曲线
         - 时钟
         - 复杂图形
-            
+
             比如：弹球，随机数分布, 。。。。。。
 2. 撰写实验报告：开发思路，主要技术，相关算法，主要编程点（书上的尽量少写，主要写自己的东西）
 
@@ -56,6 +56,6 @@ BUPT programing practice
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/1.png)
 
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/2.png)
-### [实验二 学生信息管理系统]()
+### [实验二 学生信息管理系统](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/StudentInfo)
 
 
