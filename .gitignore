@@ -1,9 +1,9 @@
-.exe
+*.exe
 .vs
-.ilk
-.cpd
+*.ilk
+*.cpd
 Debug
 x64
-.vscode
-.tlog
+*.vscode
+*.tlog
 Release

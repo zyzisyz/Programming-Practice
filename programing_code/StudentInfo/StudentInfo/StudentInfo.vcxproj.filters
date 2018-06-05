@@ -1,75 +1,134 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Else">
+      <UniqueIdentifier>{51d45707-033e-4c53-ba98-fd2bebfd5946}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dlg">
+      <UniqueIdentifier>{9e6422fe-c1cd-450c-8b49-4e0da1f5f06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ODBC">
+      <UniqueIdentifier>{c58dd5bc-1bcd-4358-b71f-b50048a9dccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dlg\head">
+      <UniqueIdentifier>{72881bf0-9826-4fe2-b50f-22da90934252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dlg\source">
+      <UniqueIdentifier>{1f0ff58b-f5c2-49b1-a293-607f600522ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ODBC\head">
+      <UniqueIdentifier>{2ebcf49d-e681-4c28-8a12-0801f9e25171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ODBC\source">
+      <UniqueIdentifier>{3a9db40a-0999-4e45-a8cf-2cd4ce2327a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StudentInfo.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StudentInfoDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
+      <Filter>Else</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>头文件</Filter>
+      <Filter>Else</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Else</Filter>
     </ClInclude>
     <ClInclude Include="CCourseDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CSplashScreenDlg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CStudentDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>Dlg\head</Filter>
     </ClInclude>
     <ClInclude Include="CGradeDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>Dlg\head</Filter>
     </ClInclude>
     <ClInclude Include="CSCChoiceDlg.h">
-      <Filter>头文件</Filter>
+      <Filter>Dlg\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CSplashScreenDlg.h">
+      <Filter>Dlg\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CStudentDlg.h">
+      <Filter>Dlg\head</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentInfoDlg.h">
+      <Filter>Dlg\head</Filter>
+    </ClInclude>
+    <ClInclude Include="Teacher.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="Department.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="SC.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="Schedule.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="SClass.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="Course.h">
+      <Filter>ODBC\head</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentInfo.h">
+      <Filter>main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StudentInfo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="StudentInfoDlg.cpp">
-      <Filter>源文件</Filter>
+      <Filter>main</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Else</Filter>
     </ClCompile>
     <ClCompile Include="CCourseDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CSplashScreenDlg.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CStudentDlg.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Dlg\source</Filter>
     </ClCompile>
     <ClCompile Include="CGradeDlg.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Dlg\source</Filter>
     </ClCompile>
     <ClCompile Include="CSCChoiceDlg.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Dlg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="CSplashScreenDlg.cpp">
+      <Filter>Dlg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="CStudentDlg.cpp">
+      <Filter>Dlg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentInfoDlg.cpp">
+      <Filter>Dlg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Teacher.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SClass.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Schedule.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="SC.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Department.cpp">
+      <Filter>ODBC\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Course.cpp">
+      <Filter>ODBC\source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
