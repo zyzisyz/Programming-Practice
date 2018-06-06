@@ -1,8 +1,7 @@
 # MFC连接本地的SQL server
 
 感觉这学生信息管理系统要写的代码实在太多了，所以我们可以精诚合作一波。
-我的MFC窗口已经可以显示SQL Server数据库里的数据了，但感觉使用MFC 连接sql server 并不是很容易，所以我写了
-这个大家来参考一下。
+我的MFC窗口已经可以显示SQL Server数据库里的数据了，但感觉使用MFC 连接sql server 并不是很容易，所以我写了这个大家来参考一下。
 
 大概的步骤就是：
 
@@ -12,7 +11,7 @@
 
 3. 然后按照[这个博客](https://blog.csdn.net/zcyzsy/article/details/53027416)设置ODBC
 
-4. 打开你的vs工程文件
+4. 弄好了上述步骤打开你的vs工程文件，按我的图片来操作（如果没看到图片可以刷新一下）
 
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/3.jpg)
 
