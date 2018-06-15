@@ -1,14 +1,14 @@
-// Schedule.h : CSchedule 的声明
+// CGrade.h : CGrade 的声明
 
 #pragma once
 
-// 代码生成在 2018年6月5日, 20:54
+// 代码生成在 2018年6月14日, 23:08
 
-class CSchedule : public CRecordset
+class CGrade : public CRecordset
 {
 public:
-	CSchedule(CDatabase* pDatabase = NULL);
-	DECLARE_DYNAMIC(CSchedule)
+	CGrade(CDatabase* pDatabase = NULL);
+	DECLARE_DYNAMIC(CGrade)
 
 // 字段/参数数据
 
@@ -20,10 +20,9 @@ public:
 // (注意: 必须使用 3.5 版或更高版本的 ODBC 驱动程序
 // 以同时支持 Unicode 和这些转换)。
 
-	CStringA	m_CourseNo;
-	CTime	m_StartYear;
-	CStringA	m_ClassNo;
-	CStringA	m_Teacher;
+	CStringA	m_SNo;
+	CStringA	m_CourseNO;
+	long	m_Sscore;
 
 // 重写
 	// 向导生成的虚函数重写

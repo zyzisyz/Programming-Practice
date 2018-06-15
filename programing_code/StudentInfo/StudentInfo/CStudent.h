@@ -1,8 +1,8 @@
-// Student.h : CStudent 的声明
+// CStudent.h : CStudent 的声明
 
 #pragma once
 
-// 代码生成在 2018年6月5日, 20:41
+// 代码生成在 2018年6月11日, 22:34
 
 class CStudent : public CRecordset
 {
@@ -12,7 +12,7 @@ public:
 
 // 字段/参数数据
 
-// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CStringA 和 Unicode
+// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CString 和 Unicode
 // 数据类型的 CStringW)的实际数据类型。
 //  这是为防止 ODBC 驱动程序执行可能
 // 不必要的转换。如果希望，可以将这些成员更改为
@@ -20,16 +20,12 @@ public:
 // (注意: 必须使用 3.5 版或更高版本的 ODBC 驱动程序
 // 以同时支持 Unicode 和这些转换)。
 
-	CStringA	m_Sno;
-	CStringA	m_Sname;
-	CStringA	m_Ssex;
-	CStringA	m_ClassNo;
-	CTime		m_Sbirth;
-	CStringA	m_Status;
-	CStringA	m_Hometown;
-	CTime		m_Enrollment;
-	CStringA	m_Telephone;
-	CStringA	m_Resume;
+	CString	m_SName;
+	CString	m_SNo;
+	CString	m_SMajor;
+	CString	m_SSex;
+	CString	m_SBirthDate;
+	CString	m_SSchoolDate;
 
 // 重写
 	// 向导生成的虚函数重写

@@ -2,7 +2,7 @@
 
 #pragma once
 
-// 代码生成在 2018年6月5日, 20:44
+// 代码生成在 2018年6月11日, 22:50
 
 class CCourse : public CRecordset
 {
@@ -12,7 +12,7 @@ public:
 
 // 字段/参数数据
 
-// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CStringA 和 Unicode
+// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CString 和 Unicode
 // 数据类型的 CStringW)的实际数据类型。
 //  这是为防止 ODBC 驱动程序执行可能
 // 不必要的转换。如果希望，可以将这些成员更改为
@@ -20,20 +20,16 @@ public:
 // (注意: 必须使用 3.5 版或更高版本的 ODBC 驱动程序
 // 以同时支持 Unicode 和这些转换)。
 
-	CStringA	m_CourseNo;
-	CStringA	m_CourseName;
-	CStringA	m_Category;
-	CStringA	m_Major;
-	CStringA	m_Grade;
-	CStringA	m_StartTM;
-	float		m_Credits;
-	CStringA	m_WeekHours;
+	CString	m_CourseName;
+	CString	m_CourseNO;
+	CString	m_CourseCredit;
 
 // 重写
 	// 向导生成的虚函数重写
 	public:
 	virtual CString GetDefaultConnect();	// 默认连接字符串
-	virtual CString GetDefaultSQL(); 		// 记录集的默认 SQL
+
+	virtual CString GetDefaultSQL(); 	// 记录集的默认 SQL
 	virtual void DoFieldExchange(CFieldExchange* pFX);	// RFX 支持
 
 // 实现
@@ -41,5 +37,7 @@ public:
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
+
 };
+
 

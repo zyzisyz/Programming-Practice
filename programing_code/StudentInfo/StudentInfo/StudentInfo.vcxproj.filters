@@ -8,25 +8,25 @@
     <Filter Include="Else">
       <UniqueIdentifier>{51d45707-033e-4c53-ba98-fd2bebfd5946}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dlg">
-      <UniqueIdentifier>{9e6422fe-c1cd-450c-8b49-4e0da1f5f06f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ODBC">
+    <Filter Include="DATA_and_Dlg">
       <UniqueIdentifier>{c58dd5bc-1bcd-4358-b71f-b50048a9dccb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dlg\head">
-      <UniqueIdentifier>{72881bf0-9826-4fe2-b50f-22da90934252}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Dlg\source">
-      <UniqueIdentifier>{1f0ff58b-f5c2-49b1-a293-607f600522ac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ODBC\head">
+    <Filter Include="DATA_and_Dlg\Course">
       <UniqueIdentifier>{2ebcf49d-e681-4c28-8a12-0801f9e25171}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ODBC\source">
+    <Filter Include="DATA_and_Dlg\Student">
       <UniqueIdentifier>{3a9db40a-0999-4e45-a8cf-2cd4ce2327a0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main">
+    <Filter Include="DATA_and_Dlg\Grade">
+      <UniqueIdentifier>{7a13c548-04ff-4bc9-b980-ec6e3f4201db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DATA_and_Dlg\Choice">
+      <UniqueIdentifier>{1cd39d9a-bccf-4df6-8938-11d81268df48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainDlg">
+      <UniqueIdentifier>{9e6422fe-c1cd-450c-8b49-4e0da1f5f06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="init">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
@@ -41,94 +41,64 @@
     <ClInclude Include="targetver.h">
       <Filter>Else</Filter>
     </ClInclude>
-    <ClInclude Include="CCourseDlg.h">
-      <Filter>Dlg\head</Filter>
+    <ClInclude Include="StudentInfo.h">
+      <Filter>init</Filter>
     </ClInclude>
-    <ClInclude Include="CGradeDlg.h">
-      <Filter>Dlg\head</Filter>
-    </ClInclude>
-    <ClInclude Include="CSCChoiceDlg.h">
-      <Filter>Dlg\head</Filter>
-    </ClInclude>
-    <ClInclude Include="CSplashScreenDlg.h">
-      <Filter>Dlg\head</Filter>
-    </ClInclude>
-    <ClInclude Include="CStudentDlg.h">
-      <Filter>Dlg\head</Filter>
-    </ClInclude>
-    <ClInclude Include="StudentInfoDlg.h">
-      <Filter>Dlg\head</Filter>
-    </ClInclude>
-    <ClInclude Include="Teacher.h">
-      <Filter>ODBC\head</Filter>
-    </ClInclude>
-    <ClInclude Include="Department.h">
-      <Filter>ODBC\head</Filter>
-    </ClInclude>
-    <ClInclude Include="SC.h">
-      <Filter>ODBC\head</Filter>
-    </ClInclude>
-    <ClInclude Include="Schedule.h">
-      <Filter>ODBC\head</Filter>
-    </ClInclude>
-    <ClInclude Include="SClass.h">
-      <Filter>ODBC\head</Filter>
-    </ClInclude>
-    <ClInclude Include="Student.h">
-      <Filter>ODBC\head</Filter>
+    <ClInclude Include="CStudent.h">
+      <Filter>DATA_and_Dlg\Student</Filter>
     </ClInclude>
     <ClInclude Include="Course.h">
-      <Filter>ODBC\head</Filter>
+      <Filter>DATA_and_Dlg\Course</Filter>
     </ClInclude>
-    <ClInclude Include="StudentInfo.h">
-      <Filter>main</Filter>
+    <ClInclude Include="CCourseDlg.h">
+      <Filter>DATA_and_Dlg\Course</Filter>
+    </ClInclude>
+    <ClInclude Include="CStudentDlg.h">
+      <Filter>DATA_and_Dlg\Student</Filter>
+    </ClInclude>
+    <ClInclude Include="CGradeDlg.h">
+      <Filter>DATA_and_Dlg\Grade</Filter>
+    </ClInclude>
+    <ClInclude Include="CSCChoiceDlg.h">
+      <Filter>DATA_and_Dlg\Choice</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentInfoDlg.h">
+      <Filter>MainDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="CGrade.h">
+      <Filter>DATA_and_Dlg\Grade</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StudentInfo.cpp">
-      <Filter>main</Filter>
+      <Filter>init</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Else</Filter>
     </ClCompile>
-    <ClCompile Include="CCourseDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CGradeDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CSCChoiceDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CSplashScreenDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CStudentDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="StudentInfoDlg.cpp">
-      <Filter>Dlg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="Teacher.cpp">
-      <Filter>ODBC\source</Filter>
-    </ClCompile>
-    <ClCompile Include="Student.cpp">
-      <Filter>ODBC\source</Filter>
-    </ClCompile>
-    <ClCompile Include="SClass.cpp">
-      <Filter>ODBC\source</Filter>
-    </ClCompile>
-    <ClCompile Include="Schedule.cpp">
-      <Filter>ODBC\source</Filter>
-    </ClCompile>
-    <ClCompile Include="SC.cpp">
-      <Filter>ODBC\source</Filter>
-    </ClCompile>
-    <ClCompile Include="Department.cpp">
-      <Filter>ODBC\source</Filter>
+    <ClCompile Include="CStudent.cpp">
+      <Filter>DATA_and_Dlg\Student</Filter>
     </ClCompile>
     <ClCompile Include="Course.cpp">
-      <Filter>ODBC\source</Filter>
+      <Filter>DATA_and_Dlg\Course</Filter>
+    </ClCompile>
+    <ClCompile Include="CCourseDlg.cpp">
+      <Filter>DATA_and_Dlg\Course</Filter>
+    </ClCompile>
+    <ClCompile Include="CStudentDlg.cpp">
+      <Filter>DATA_and_Dlg\Student</Filter>
+    </ClCompile>
+    <ClCompile Include="CGradeDlg.cpp">
+      <Filter>DATA_and_Dlg\Grade</Filter>
+    </ClCompile>
+    <ClCompile Include="CSCChoiceDlg.cpp">
+      <Filter>DATA_and_Dlg\Choice</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentInfoDlg.cpp">
+      <Filter>MainDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="CGrade.cpp">
+      <Filter>DATA_and_Dlg\Grade</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
