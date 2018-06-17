@@ -1,14 +1,14 @@
-// CGrade.h : CGrade 的声明
+// Grade.h : Grade 的声明
 
 #pragma once
 
-// 代码生成在 2018年6月14日, 23:08
+// 代码生成在 2018年6月17日, 23:26
 
-class CGrade : public CRecordset
+class Grade : public CRecordset
 {
 public:
-	CGrade(CDatabase* pDatabase = NULL);
-	DECLARE_DYNAMIC(CGrade)
+	Grade(CDatabase* pDatabase = NULL);
+	DECLARE_DYNAMIC(Grade)
 
 // 字段/参数数据
 
@@ -20,9 +20,18 @@ public:
 // (注意: 必须使用 3.5 版或更高版本的 ODBC 驱动程序
 // 以同时支持 Unicode 和这些转换)。
 
-	CStringA	m_SNo;
-	CStringA	m_CourseNO;
-	long	m_Sscore;
+	CString	m_dboChoiceSNo;
+	CString	m_dboChoiceCourseNO;
+	long	m_dboChoiceSscore;
+	CString	m_dboCourseCourseName;
+	CString	m_dboCourseCourseNO;
+	long	m_dboCourseCourseCredit;
+	CString	m_dboCStudentSName;
+	CString	m_dboCStudentSNo;
+	CString	m_dboCStudentSMajor;
+	CString	m_dboCStudentSSex;
+	CString	m_dboCStudentSBirthDate;
+	CString	m_dboCStudentSSchoolDate;
 
 // 重写
 	// 向导生成的虚函数重写

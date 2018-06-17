@@ -15,7 +15,7 @@ CCourse::CCourse(CDatabase* pdb)
 {
 	m_CourseName = "";
 	m_CourseNO = "";
-	m_CourseCredit = "";
+	
 	m_nFields = 3;
 	m_nDefaultType = dynaset;
 }
@@ -42,7 +42,7 @@ void CCourse::DoFieldExchange(CFieldExchange* pFX)
 // ODBC 尝试自动将列值转换为所请求的类型
 	RFX_Text(pFX, _T("[CourseName]"), m_CourseName);
 	RFX_Text(pFX, _T("[CourseNO]"), m_CourseNO);
-	RFX_Text(pFX, _T("[CourseCredit]"), m_CourseCredit);
+	RFX_Long(pFX, _T("[CourseCredit]"), m_CourseCredit);
 
 }
 /////////////////////////////////////////////////////////////////////////////

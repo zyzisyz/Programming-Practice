@@ -65,7 +65,10 @@
     <ClInclude Include="StudentInfoDlg.h">
       <Filter>MainDlg</Filter>
     </ClInclude>
-    <ClInclude Include="CGrade.h">
+    <ClInclude Include="Choice.h">
+      <Filter>DATA_and_Dlg\Choice</Filter>
+    </ClInclude>
+    <ClInclude Include="Grade.h">
       <Filter>DATA_and_Dlg\Grade</Filter>
     </ClInclude>
   </ItemGroup>
@@ -97,7 +100,10 @@
     <ClCompile Include="StudentInfoDlg.cpp">
       <Filter>MainDlg</Filter>
     </ClCompile>
-    <ClCompile Include="CGrade.cpp">
+    <ClCompile Include="Choice.cpp">
+      <Filter>DATA_and_Dlg\Choice</Filter>
+    </ClCompile>
+    <ClCompile Include="Grade.cpp">
       <Filter>DATA_and_Dlg\Grade</Filter>
     </ClCompile>
   </ItemGroup>

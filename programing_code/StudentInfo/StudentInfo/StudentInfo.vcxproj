@@ -188,12 +188,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CCourseDlg.h" />
-    <ClInclude Include="CGrade.h" />
     <ClInclude Include="CGradeDlg.h" />
+    <ClInclude Include="Choice.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="CSCChoiceDlg.h" />
     <ClInclude Include="CStudent.h" />
     <ClInclude Include="CStudentDlg.h" />
+    <ClInclude Include="Grade.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StudentInfo.h" />
@@ -202,12 +203,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CCourseDlg.cpp" />
-    <ClCompile Include="CGrade.cpp" />
     <ClCompile Include="CGradeDlg.cpp" />
+    <ClCompile Include="Choice.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="CSCChoiceDlg.cpp" />
     <ClCompile Include="CStudent.cpp" />
     <ClCompile Include="CStudentDlg.cpp" />
+    <ClCompile Include="Grade.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

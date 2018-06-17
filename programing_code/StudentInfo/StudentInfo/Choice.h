@@ -1,18 +1,18 @@
-// Course.h : CCourse 的声明
+// Choice.h : Choice 的声明
 
 #pragma once
 
-// 代码生成在 2018年6月11日, 22:50
+// 代码生成在 2018年6月17日, 23:20
 
-class CCourse : public CRecordset
+class Choice : public CRecordset
 {
 public:
-	CCourse(CDatabase* pDatabase = NULL);
-	DECLARE_DYNAMIC(CCourse)
+	Choice(CDatabase* pDatabase = NULL);
+	DECLARE_DYNAMIC(Choice)
 
 // 字段/参数数据
 
-// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CString 和 Unicode
+// 以下字符串类型(如果存在)反映数据库字段(ANSI 数据类型的 CStringA 和 Unicode
 // 数据类型的 CStringW)的实际数据类型。
 //  这是为防止 ODBC 驱动程序执行可能
 // 不必要的转换。如果希望，可以将这些成员更改为
@@ -20,9 +20,9 @@ public:
 // (注意: 必须使用 3.5 版或更高版本的 ODBC 驱动程序
 // 以同时支持 Unicode 和这些转换)。
 
-	CString	m_CourseName;
-	CString	m_CourseNO;
-	long	m_CourseCredit;
+	CStringA	m_SNo;
+	CStringA	m_CourseNO;
+	long	m_Sscore;
 
 // 重写
 	// 向导生成的虚函数重写
