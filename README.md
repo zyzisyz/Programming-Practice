@@ -1,13 +1,15 @@
 # Programming-Practice
+
 北邮信通院程序设计实践（笔记+代码+实验报告）
 
 BUPT programing practice
 
 ## 文件结构s说明
+
 |文件名|说明|
 |:------|:-----|
 |[C++_note](https://github.com/zyzisyz/Programming-Practice/tree/master/C%2B%2B_note)|用于存放C++基础知识的markdown笔记和部分示例代码|
-|[programing_code]()|用于存放win32程序设计实验所写的vs2017工程文件|
+|[programing_code](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code)|用于存放win32程序设计实验所写的vs2017工程文件|
 |[img](https://github.com/zyzisyz/Programming-Practice/tree/master/img)|存放图片文件|
 
 ---
@@ -58,3 +60,17 @@ BUPT programing practice
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/2.png)
 
 ### [实验二 学生信息管理系统](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/StudentInfo)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/10.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/11.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/12.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/13.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/14.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/15.png)
+
+![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/16.png)
