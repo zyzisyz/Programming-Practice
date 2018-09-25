@@ -61,6 +61,8 @@ BUPT programing practice
 
 ### [实验二 学生信息管理系统](https://github.com/zyzisyz/Programming-Practice/tree/master/programing_code/StudentInfo)
 
+这个是一个用MFC写的CS架构的学生信息管理系统客户端。数据库使用的是MS sql server。主要学习了如何使用C++连接和操作数据库和基本MFC界面的编写。
+
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/10.png)
 
 ![image](https://github.com/zyzisyz/Programming-Practice/blob/master/img/11.png)
